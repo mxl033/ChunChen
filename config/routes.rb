@@ -1,14 +1,16 @@
 ChunChen::Application.routes.draw do
-
   get "admin" => "admin#index"
 
-  controller :sessions do
-    get    "login"  => :new
-    post   "login"  => :create
-    delete "logout" => :destroy
+  controller :signup do
+    get  "signup" => :new
+    post "signup" => :create
   end
 
-  resources :users
+  controller :signin do
+    get    "signin"  => :new
+    post   "signin"  => :create
+    delete "signout" => :destroy
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

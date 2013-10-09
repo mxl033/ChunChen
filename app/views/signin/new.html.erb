@@ -1,0 +1,27 @@
+<div class="depot_form" >
+  <% if alert %>
+    <p id="notice" ><%= alert %></p>
+  <% end %>
+
+  <fieldset>
+    <legend>Please Sign In</legend>
+
+    <%= form_tag do %>
+    <table>
+      <tr class="field">
+        <td><label for="name" >Name:</label></td>
+        <td><%= text_field_tag :name, params[:name], size: 24 %></td>
+      </tr>
+      <tr class="field">
+        <td><label for="password" >Password:</label></td>
+        <td><%= password_field_tag :password, params[:password], size: 25 %></td>
+      </tr>
+      <tr class="actions">
+        <td><%= submit_tag "Sign In" %></td>
+      </tr>
+    </table>
+    <% end %>
+
+  </fieldset>
+</div>
+
