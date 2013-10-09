@@ -1,0 +1,9 @@
+<% unless has_user_signed? %>
+  <%= link_to "Sign Up", signup_path %>
+  <%= link_to "Sign In", signin_path %>
+<% else %>
+  <%= link_to "Sign Out", signout_path, method: "delete" %>
+<% end %>
+
+<h1>Plan Board</h1>
+<p>Welcome, <B><%= signed_name %></B>!</p>
