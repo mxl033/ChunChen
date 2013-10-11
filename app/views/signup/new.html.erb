@@ -14,15 +14,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %> <%= mark_necessary_field(@user, :name) %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :email %> <%= mark_necessary_field(@user, :email) %><br>
+    <%= f.text_field :email, placeholder: "Email addr" %>
+  </div>
+  <div class="field">
+    <%= f.label :password %> <%= mark_necessary_field(@user, :password) %><br>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label "Confirm Password"%><br>
+    <%= f.label "Confirm Password"%> <%= mark_necessary_field(@user, :password_confirmation) %><br>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">

@@ -28,6 +28,6 @@ class SignupController < ApplicationController
 private
   # Never trust parameters from the scary internet, only allow the white list through.
   def input_params
-    params.require(:signup).permit(:name, :password, :password_confirmation)
+    params.require(:signup).permit(:name, :email, :password, :password_confirmation)
   end
 end
